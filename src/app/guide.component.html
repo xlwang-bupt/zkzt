@@ -1,0 +1,11 @@
+<h2>{{title}}</h2>
+<ul>
+  <li class="guide-first" *ngFor="let guide of guideList; let i = index">
+    <div>
+      {{guide.name}}
+    <li *ngFor="let child of guide.children; let i = index;">
+      <span (click)="testFunc(child)">{{child}}</span>
+    </li>
+    </div>
+  </li>
+</ul>
